@@ -16,17 +16,17 @@ enum e_filetype
 /*
 **struct for auto substitution
 */
-typedef struct	s_as
-{
-	struct s_file_ifno	**files;
-	size_t				size;
-}				t_as;
-
 struct			s_file_info
 {
 	char			*filename;
 	enum e_filetype filetype;
 	size_t			length;
 };
+
+typedef struct	s_as
+{
+	struct s_file_info	*files;
+	size_t				size;
+}				t_as;
 
 #endif
