@@ -1,23 +1,26 @@
 #include "libft.h"
+#include "as_struct.h"
 
 void auto_substitution(struct s_input *input)
 {
-	size_t len;
+	size_t	len;
+	t_as	*auto_sub;
 
 	if (gap_is_empty(input->gap))
 	{
 		//вводим символ табуляции
 	}
-	else if ((len = ft_lineslen(execution_files_search(getenv("PATH")))) == 1)
+	auto_sub = search_files_reqursive(getenv("PATH"));
+	if (!auto_sub->size)
 	{
-		//Просто дополняем найденный
+	
 	}
-	else if (!len)
+	else if (auto_sub->size == 1)
 	{
-		//ничего не делаем
+
 	}
 	else
 	{
-		//предлагаем варианты, запускаем ft_select
+		
 	}
 }
